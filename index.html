@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sealant Store</title>
+    <link rel="shortcut icon" href="images/cart4.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -18,20 +19,20 @@
     <div class="spray-body">
         <div class="spray">
             <div class="form">
-                <form action="">
-                    <div class="sealant-head">
-                        <h1>Sealant Spray <i class="bi bi-cart4"></i>
-                        </h1>
-                        <p>Payment on Delivery & Free Shipping</p>
-                        <p style="font-family:arial black; font-size: 20px; font-weight: 500; color: rgb(156, 11, 6);">(Only available in Ghana)</p>
-                        <div class="checkout">
-                            <select name="" id="">
-                                <option value="250">Buy 1</i></option>
-                                <option value="500" >Buy 2 Get 1 Free</option>
-                                <option value="750" selected>Buy 3 Get 2 Free</option>
-                            </select>
-                        </div>
+                <div class="sealant-head">
+                    <h1>Sealant Spray <i class="bi bi-cart4"></i>
+                    </h1>
+                    <p>Payment on Delivery & Free Shipping</p>
+                    <p style="font-family:arial black; font-size: 20px; font-weight: 500; color: rgb(156, 11, 6);">(Only available in Ghana)</p>
+                    <div class="checkout">
+                        <select id="item" onchange="amount()">
+                            <option value="300">Buy 1 (GHC300)</option>
+                            <option value="550" >Buy 2 Get 1 Free (GHC550)</option>
+                            <option value="800" selected>Buy 3 Get 2 Free (GHC800)</option>
+                        </select>
                     </div>
+                </div>
+                <form id="form">
                     <div>
                         <label for="">Fullname (display name)</label>
                         <input type="text" name="" id="">
@@ -50,10 +51,9 @@
                     </div>
                     <div>
                         <label for="">Amount</label>
-                        <input type="text" name="" id="amount" value="GHC250" disabled>
+                        <input type="text" name="" id="amount" value="GHC800" disabled>
                     </div>
-                    <input type="submit" value="Place Order (GHC250)">
-                    
+                    <button id="price">Place Order(GHC800)</button>
                     <div>
                         <div class="delivery-policy">
                             <h3>Delivery Policy</h3>
@@ -132,6 +132,7 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script src="invoice.js"></script>
     <!-- <script src="navbar.js"></script> -->
 </body>
 </html>
